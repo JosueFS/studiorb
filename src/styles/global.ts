@@ -21,6 +21,11 @@ const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Prata', serif;
+    color: ${(props) => props.theme.colors.textPrimary};
+  }
+
   a {
     text-decoration: none;
 
@@ -31,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
 
   section {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
 
     > p {
@@ -40,7 +45,6 @@ const GlobalStyles = createGlobalStyle`
 
     header {
     width: 100%;
-    text-align: center;
 
       &.bgDark {
         h2, p {
@@ -61,7 +65,7 @@ const GlobalStyles = createGlobalStyle`
       }
 
       >   p {
-        color: ${(props) => props.theme.colors.text};
+        color: ${(props) => props.theme.colors.textPrimary};
         max-width: 700px;
         display: inline-block;
         margin-top: 16px;

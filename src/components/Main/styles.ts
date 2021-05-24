@@ -7,25 +7,25 @@ export const Header = styled.section`
   display: flex;
   padding: 2vh 5vw;
 
-  background: rgba(255, 255, 255, 0.7), url('./img/spa_bg1.jpg') no-repeat;
+  background: rgba(255, 255, 255, 0.7), url('./img/bronze_bg1.jpg') no-repeat;
   background: -moz-linear-gradient(
       left,
       rgba(255, 255, 255, 0.7) 25%,
       transparent 95%
     ),
-    url('./img/spa_bg1.jpg') no-repeat;
+    url('./img/bronze_bg1.jpg') no-repeat;
   background: -webkit-linear-gradient(
       left,
       rgba(255, 255, 255, 0.7) 25%,
       transparent 95%
     ),
-    url('./img/spa_bg1.jpg') no-repeat;
+    url('./img/bronze_bg1.jpg') no-repeat;
   background: linear-gradient(
       to right,
       rgba(255, 255, 255, 0.7) 25%,
       transparent 95%
     ),
-    url('./img/spa_bg1.jpg') no-repeat;
+    url('./img/bronze_bg1.jpg') no-repeat;
 
   background-size: cover;
 
@@ -55,8 +55,10 @@ export const Header = styled.section`
       div {
         margin-bottom: 15vh;
         h1 {
-          font-size: 32px;
-          margin-top: 15vh;
+          font-weight: normal;
+          font-size: 40px;
+          text-shadow: 2px 2px 32px #333;
+          margin-top: 10vh;
         }
 
         p {

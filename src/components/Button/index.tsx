@@ -1,6 +1,8 @@
+import React from 'react';
 import styled from 'styled-components';
 
 interface IProps {
+  additionalStyle?: React.CSSProperties;
   customStyle?: 'default' | 'secondary';
 }
 
@@ -8,6 +10,7 @@ type IStyle = Omit<IProps, 'text'>;
 
 const Anchor = styled.a<IStyle>`
   max-width: 180px;
+  max-height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,10 +38,16 @@ const Anchor = styled.a<IStyle>`
   font-weight: 600;
 `;
 
-const Button: React.FC<IProps> = ({ children, customStyle = 'default' }) => {
+const Button: React.FC<IProps> = ({
+  children,
+  customStyle = 'default',
+  additionalStyle,
+}) => {
   return (
     <>
-      <Anchor customStyle={customStyle}>{children}</Anchor>
+      <Anchor style={additionalStyle} customStyle={customStyle}>
+        {children}
+      </Anchor>
     </>
   );
 };

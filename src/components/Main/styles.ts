@@ -7,25 +7,25 @@ export const Header = styled.section`
   display: flex;
   padding: 2vh 5vw;
 
-  background: rgba(255, 255, 255, 0.7), url('./img/bronze_bg1.jpg') no-repeat;
+  background: rgba(255, 255, 255, 0.8), url('./img/bronze_bg2.jpg') no-repeat;
   background: -moz-linear-gradient(
       left,
-      rgba(255, 255, 255, 0.7) 25%,
+      rgba(255, 255, 255, 0.75) 20%,
       transparent 95%
     ),
-    url('./img/bronze_bg1.jpg') no-repeat;
+    url('./img/bronze_bg2.jpg') no-repeat;
   background: -webkit-linear-gradient(
       left,
-      rgba(255, 255, 255, 0.7) 25%,
+      rgba(255, 255, 255, 0.75) 20%,
       transparent 95%
     ),
-    url('./img/bronze_bg1.jpg') no-repeat;
+    url('./img/bronze_bg2.jpg') no-repeat;
   background: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0.7) 25%,
+      rgba(255, 255, 255, 0.75) 20%,
       transparent 95%
     ),
-    url('./img/bronze_bg1.jpg') no-repeat;
+    url('./img/bronze_bg2.jpg') no-repeat;
 
   background-size: cover;
 
@@ -59,7 +59,7 @@ export const Header = styled.section`
         h1 {
           font-weight: normal;
           font-size: 40px;
-          text-shadow: 2px 2px 32px #333;
+          text-shadow: 0 0 24px #333;
           margin-top: 10vh;
         }
 
@@ -71,6 +71,33 @@ export const Header = styled.section`
 
     ul {
       /* margin-left: 96px; */
+    }
+  }
+
+  #bouncing-arrow {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
     }
   }
 `;
@@ -87,7 +114,7 @@ export const MobileMenu = styled.menu`
   height: 100%;
   top: 0;
   left: -100%;
-  transition: 0.5s;
+  transition: 0.3s;
 
   background: ${(props) => props.theme.colors.primary};
 
@@ -99,18 +126,19 @@ export const MobileMenu = styled.menu`
 
     transition: all 250ms ease-in-out;
 
-    a:after {
+    &::after {
+      display: block;
       content: '';
-      width: 0;
-      height: 2px;
-      background: #019fb6;
+      border-bottom: solid 2px #efc6c0;
+      transform: scaleX(0);
+      transition: transform 250ms ease-in-out;
     }
 
     &:hover {
-      letter-spacing: 2px;
+      letter-spacing: 4px;
 
-      &:after {
-        width: 100%;
+      &::after {
+        transform: scaleX(1);
       }
     }
   }

@@ -18,10 +18,12 @@ const SocialLinks = styled.ul`
       justify-content: center;
       height: 100%;
       width: 100%;
+      border-radius: 50%;
+      transition: all 0.5s;
 
       svg {
         color: ${(props) => props.theme.colors.textPrimary};
-        transition: all 0.1s;
+        transition: all 0.2s ease-out;
 
         &.bgDark {
           color: ${(props) => props.theme.colors.background};
@@ -40,7 +42,7 @@ const SocialLinks = styled.ul`
           #d6249f 60%,
           #285aeb 90%
         );
-        border-radius: 50%;
+
         svg {
           color: #fff;
           width: 40px;
@@ -67,8 +69,8 @@ const SocialLinks = styled.ul`
         /* background: #fff; */
         svg {
           color: ${(props) => props.theme.colors.whatsapp};
-          width: 38px;
-          height: 38px;
+          width: 40px;
+          height: 40px;
         }
       }
     }

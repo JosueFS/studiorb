@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { useCallback, useRef } from 'react';
 
-export const Container = styled.article`
+export const MobileButtonMenu = styled.article`
   @media handheld and (min-width: 768px),
     screen and (min-device-width: 768px),
     screen and (min-width: 768px) {
@@ -16,7 +15,7 @@ export const Container = styled.article`
   height: 80px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  /* border: 3px solid #fff; */
+  z-index: 999;
 
   .menu-btn__burger {
     width: 50px;
@@ -53,29 +52,11 @@ export const Container = styled.article`
 
   &.menu-btn.open .menu-btn__burger::before {
     transform: rotate(45deg) translate(35px, -35px);
+    background: ${(props) => props.theme.colors.background};
   }
 
   &.menu-btn.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
+    background: ${(props) => props.theme.colors.background};
   }
 `;
-
-const MobileButtonMenu = () => {
-  const menuRef = useRef<HTMLDivElement>();
-  // const sidebarRef = useRef<HTMLDivElement>();
-
-  const toggleMenu = useCallback(() => {
-    menuRef.current.classList.toggle('open');
-    // sidebarRef.current.classList.toggle('open');
-  }, []);
-
-  return (
-    <>
-      <Container ref={menuRef} className="menu-btn" onClick={toggleMenu}>
-        <div className="menu-btn__burger"></div>
-      </Container>
-    </>
-  );
-};
-
-export default MobileButtonMenu;

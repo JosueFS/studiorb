@@ -1,16 +1,31 @@
 import { FiChevronRight } from 'react-icons/fi';
+import { useCallback, useRef } from 'react';
 
 import Button from 'components/Button';
-import { Header, MobileMenu } from './styles';
 import SocialNetwork from 'components/SocialNetwork';
 
-import MobileButtonMenu from 'components/MobileButtonMenu';
+import { Header, MobileMenu } from './styles';
+import { MobileButtonMenu } from './MobileButtonMenu';
 
 const Main = () => {
+  const menuRef = useRef<HTMLDivElement>();
+  const sidebarRef = useRef<HTMLDivElement>();
+
+  const toggleMenu = useCallback(() => {
+    menuRef.current.classList.toggle('open');
+    sidebarRef.current.classList.toggle('open');
+  }, []);
+
   return (
     <Header>
       <header>
-        <MobileButtonMenu />
+        <MobileButtonMenu
+          ref={menuRef}
+          className="menu-btn"
+          onClick={toggleMenu}
+        >
+          <div className="menu-btn__burger"></div>
+        </MobileButtonMenu>
 
         <div>
           <menu>
@@ -32,15 +47,14 @@ const Main = () => {
         </div>
 
         <SocialNetwork />
-
-        <MobileMenu>
-          <a href="#">Serviços</a>
-          <a href="#">Resultados</a>
-          <a href="#">Profissionais</a>
-          <a href="#">Contato</a>
-          <a href="#">Sobre nós</a>
-        </MobileMenu>
       </header>
+      <MobileMenu ref={sidebarRef}>
+        <a href="#">Serviços</a>
+        <a href="#">Resultados</a>
+        <a href="#">Profissionais</a>
+        <a href="#">Contato</a>
+        <a href="#">Sobre nós</a>
+      </MobileMenu>
     </Header>
   );
 };

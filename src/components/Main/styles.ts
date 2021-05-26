@@ -29,6 +29,8 @@ export const Header = styled.section`
 
   background-size: cover;
 
+  z-index: 1;
+
   header {
     position: relative;
     display: flex;
@@ -72,5 +74,46 @@ export const Header = styled.section`
 `;
 
 export const MobileMenu = styled.menu`
-  display: none;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+
+  background: ${(props) => props.theme.colors.primary};
+
+  a {
+    display: inline-block;
+    margin: 0;
+    font-size: 32px;
+    color: ${(props) => props.theme.colors.background};
+
+    transition: all 250ms ease-in-out;
+
+    a:after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background: #019fb6;
+    }
+
+    &:hover {
+      letter-spacing: 2px;
+
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  &.open {
+    left: 0;
+  }
 `;

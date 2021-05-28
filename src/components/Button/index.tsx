@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { AnchorHTMLAttributes } from 'react';
+import { FiChevronRight } from 'react-icons/fi';
 import styled from 'styled-components';
 
-interface IProps {
+interface IProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   additionalStyle?: React.CSSProperties;
   customStyle?: 'default' | 'secondary';
+  text: string;
 }
 
 type IStyle = Omit<IProps, 'text'>;
@@ -36,16 +38,25 @@ const Anchor = styled.a<IStyle>`
   letter-spacing: 1px;
   padding: 12px 16px;
   font-weight: 600;
+
+  span,
+  svg {
+    color: inherit;
+  }
 `;
 
 const Button: React.FC<IProps> = ({
   children,
+  text,
   customStyle = 'default',
   additionalStyle,
+  ...rest
 }) => {
   return (
     <>
-      <Anchor style={additionalStyle} customStyle={customStyle}>
+      <Anchor {...rest} style={additionalStyle} customStyle={customStyle}>
+        <span>{text}</span>
+        <FiChevronRight size={20} />
         {children}
       </Anchor>
     </>

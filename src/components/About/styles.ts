@@ -40,7 +40,7 @@ export const TextContainer = styled.div`
   }
 
   h2 {
-    font-size: 24px;
+    font-size: clamp(2.4rem, 2.4rem + 1vw, 4.8rem);
     margin: 16px 0;
     font-weight: lighter;
   }
@@ -75,7 +75,7 @@ export const Techniques = styled.div`
     span {
       width: 100%;
       color: ${(props) => props.theme.colors.textPrimary};
-      font-size: 14px;
+      font-size: clamp(1.4rem, 1.4rem + 1vw, 2.8rem);
       font-family: 'Prata', serif;
       letter-spacing: 0.5px;
       text-align: center;
@@ -98,7 +98,7 @@ export const Techniques = styled.div`
       }
 
       span {
-        font-size: 16px;
+        font-size: clamp(1.6rem, 1.6rem + 1vw, 3.2rem);
       }
     }
   }

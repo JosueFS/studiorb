@@ -17,6 +17,8 @@ export const MobileButtonMenu = styled.article`
   transition: all 0.5s ease-in-out;
   z-index: 999;
 
+  color: #fff;
+
   .menu-btn__burger {
     width: 50px;
     height: 6px;

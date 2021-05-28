@@ -38,14 +38,14 @@ export const Header = styled.section`
     justify-content: space-between;
 
     > div {
-      padding-left: 20%;
+      padding-left: 10%;
 
       menu {
         display: flex;
         gap: 16px;
-        font-size: 12px;
+        font-size: clamp(1rem, 1rem + 1vw, 1.4rem);
         font-weight: 700;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         text-transform: uppercase;
         color: ${(props) => props.theme.colors.textPrimary};
 
@@ -57,7 +57,7 @@ export const Header = styled.section`
       }
 
       div {
-        max-width: max(600px, 90%);
+        max-width: 600px;
         h1 {
           font-weight: normal;
           text-shadow: 0 0 24px #333;
@@ -122,7 +122,7 @@ export const MobileMenu = styled.menu`
   a {
     display: inline-block;
     margin: 0;
-    font-size: 32px;
+    font-size: clamp(3.2rem, 3.2rem + 1vw, 6.4rem);
     color: ${(props) => props.theme.colors.background};
 
     transition: all 250ms ease-in-out;

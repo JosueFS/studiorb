@@ -27,30 +27,31 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    font-size: clamp(1.6rem, 2rem + 4vw, 12.8rem);
+    font-size: clamp(1.6rem, 2rem + 3vw, 8rem);
   }
 
   h2 {
-    font-size: clamp(1.6rem, 2rem + 1.8vw, 12.8rem);
+    font-size: clamp(1.6rem, 2rem + 1.8vw, 8rem);
   }
 
   h3 {
-    font-size: clamp(1.6rem, 2rem + 1.6vw, 12.8rem);
+    font-size: clamp(1.6rem, 2rem + 1.6vw, 8rem);
   }
 
   h4 {
-    font-size: clamp(1.6rem, 2rem + 1.4vw, 12.8rem);
+    font-size: clamp(1.6rem, 2rem + 1.4vw, 8rem);
   }
 
   h5 {
-    font-size: clamp(1.6rem, 2rem + 1.2vw, 12.8rem);
+    font-size: clamp(1.6rem, 2rem + 1.2vw, 8rem);
   }
 
   h6 {
-    font-size: clamp(1rem, 0.8rem + 0.5vw, 12.8rem);
+    font-size: clamp(1rem, 0.8rem + 0.5vw, 8rem);
   }
 
   a {
+    /* color: ${(props) => props.theme.colors.textPrimary}; */
     text-decoration: none;
 
     &:visited {

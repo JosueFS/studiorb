@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
   height: 100vh;
   width: 100%;
-  padding: 2vh 5vw;
+  padding: 10vh 5vw;
 
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ export const Container = styled.section`
 
 export const TextContainer = styled.div`
   max-width: 60vw;
-  h4 {
+  h6 {
     color: ${(props) => props.theme.colors.primary};
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
@@ -93,8 +93,8 @@ export const Techniques = styled.div`
       max-width: 100%;
 
       img {
-        width: 280px;
-        height: 280px;
+        width: 260px;
+        height: 260px;
       }
 
       span {

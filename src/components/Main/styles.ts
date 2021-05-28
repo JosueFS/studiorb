@@ -5,7 +5,7 @@ export const Header = styled.section`
   width: 100%;
 
   display: flex;
-  padding: 2vh 5vw;
+  padding: 5vh 5vw;
 
   background: rgba(255, 255, 255, 0.8), url('./img/bronze_bg2.jpg') no-repeat;
   background: -moz-linear-gradient(
@@ -37,7 +37,9 @@ export const Header = styled.section`
     flex-direction: column;
     justify-content: space-between;
 
-    div {
+    > div {
+      padding-left: 20%;
+
       menu {
         display: flex;
         gap: 16px;
@@ -55,16 +57,15 @@ export const Header = styled.section`
       }
 
       div {
-        margin-bottom: 15vh;
+        max-width: max(600px, 90%);
         h1 {
           font-weight: normal;
-          font-size: 40px;
           text-shadow: 0 0 24px #333;
-          margin-top: 10vh;
+          margin-top: 20vh;
         }
 
         p {
-          font-size: 12px;
+          margin-bottom: 10vh;
         }
       }
     }

@@ -1,4 +1,4 @@
-import { FiChevronDown, FiChevronRight } from 'react-icons/fi';
+import { FiChevronDown } from 'react-icons/fi';
 import { useCallback, useRef } from 'react';
 
 import Button from 'components/Button';
@@ -41,11 +41,8 @@ const Main = () => {
           <div>
             <h1>Fique sempre bronzeada!</h1>
             <p>Você merece estar sempre na cor do verão</p>
+            <Button href="#" text="Agendar Horário" />
           </div>
-          <Button>
-            <span>Agendar horário</span>
-            <FiChevronRight size={20} />
-          </Button>
         </div>
 
         <SocialNetwork />

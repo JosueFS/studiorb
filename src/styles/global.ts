@@ -26,6 +26,30 @@ const GlobalStyles = createGlobalStyle`
     color: ${(props) => props.theme.colors.textPrimary};
   }
 
+  h1 {
+    font-size: clamp(1.6rem, 2rem + 4vw, 12.8rem);
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 2rem + 1.8vw, 12.8rem);
+  }
+
+  h3 {
+    font-size: clamp(1.6rem, 2rem + 1.6vw, 12.8rem);
+  }
+
+  h4 {
+    font-size: clamp(1.6rem, 2rem + 1.4vw, 12.8rem);
+  }
+
+  h5 {
+    font-size: clamp(1.6rem, 2rem + 1.2vw, 12.8rem);
+  }
+
+  h6 {
+    font-size: clamp(1rem, 0.8rem + 0.5vw, 12.8rem);
+  }
+
   a {
     text-decoration: none;
 
@@ -39,39 +63,12 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     width: 100%;
 
-    > p {
-      font-size: clamp(1rem, 1rem + 1vw, 1.6rem);
+    p {
+      font-size: clamp(1rem, 1rem + 1.2vw, 5rem);
     }
 
     header {
     width: 100%;
-
-      &.bgDark {
-        h2, p {
-          color: ${(props) => props.theme.colors.white};
-        }
-
-        h2::before {
-          background: ${(props) => props.theme.colors.primary};
-        }
-      }
-
-      h2 {
-        position: relative;
-        color: ${(props) => props.theme.colors.primary};
-        font-size: clamp(1.6rem, 1.6rem + 1vw, 4rem);
-        font-size: 700;
-        letter-spacing: 1px;
-      }
-
-      >   p {
-        color: ${(props) => props.theme.colors.textPrimary};
-        max-width: 700px;
-        display: inline-block;
-        margin-top: 16px;
-        font-size: clamp(1.1rem, 1.1rem + 1vw, 1rem);
-
-      }
 
       h2::before {
         content: '';

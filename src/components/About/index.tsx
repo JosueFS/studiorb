@@ -7,7 +7,7 @@ const About = () => {
       <Container>
         <div>
           <TextContainer>
-            <h4>A pele fica bem mais bonita com o corpo bronzeado</h4>
+            <h6>A pele fica bem mais bonita com o corpo bronzeado</h6>
             <h2>Chamada Bronzeamento</h2>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
@@ -16,7 +16,7 @@ const About = () => {
               distinctio unde!
             </p>
           </TextContainer>
-          <Button customStyle="secondary">Agendar Horário</Button>
+          <Button customStyle="secondary" text="Agendar Horário" />
         </div>
 
         <Techniques>

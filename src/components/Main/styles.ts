@@ -40,14 +40,17 @@ export const Header = styled.section`
     > div {
       padding-left: 10%;
 
-      menu {
+      > menu {
         display: flex;
         gap: 16px;
         font-size: clamp(1rem, 1rem + 1vw, 1.4rem);
         font-weight: 700;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: ${(props) => props.theme.colors.textPrimary};
+
+        a {
+          color: ${(props) => props.theme.colors.textPrimary};
+        }
 
         @media handheld and (max-width: 767px),
           screen and (max-device-width: 767px),
@@ -84,6 +87,10 @@ export const Header = styled.section`
     height: 40px;
 
     animation: bounce 2s infinite;
+
+    &.open {
+      display: none;
+    }
   }
 
   @keyframes bounce {
@@ -112,7 +119,7 @@ export const MobileMenu = styled.menu`
   gap: 8px;
 
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   left: -100%;
   transition: 0.3s;

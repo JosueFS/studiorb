@@ -76,8 +76,7 @@ export const Techniques = styled.div`
       color: ${(props) => props.theme.colors.textPrimary};
       font-size: clamp(1.4rem, 1.4rem + 1vw, 2.8rem);
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      letter-spacing: -0.9px;
+      letter-spacing: 0.5px;
       text-align: center;
       margin: 16px 0;
     }

@@ -11,11 +11,15 @@ import theme from 'styles/theme';
 
 const Main = () => {
   const menuRef = useRef<HTMLDivElement>();
-  const sidebarRef = useRef<HTMLDivElement>();
+  const sidebarRef = useRef<HTMLMenuElement>();
+
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  const bounceArrowRef = useRef<any>();
 
   const toggleMenu = useCallback(() => {
     menuRef.current.classList.toggle('open');
     sidebarRef.current.classList.toggle('open');
+    bounceArrowRef.current.classList.toggle('open');
   }, []);
 
   return (
@@ -47,6 +51,7 @@ const Main = () => {
 
         <SocialNetwork />
       </header>
+
       <MobileMenu ref={sidebarRef}>
         <Logo />
         <a href="#">Serviços</a>
@@ -56,11 +61,9 @@ const Main = () => {
         <a href="#">Sobre nós</a>
       </MobileMenu>
 
-      <FiChevronDown
-        id="bouncing-arrow"
-        color={theme.colors.textPrimary}
-        size={32}
-      />
+      <div id="bouncing-arrow" ref={bounceArrowRef}>
+        <FiChevronDown color={theme.colors.textPrimary} size={32} />
+      </div>
     </Header>
   );
 };

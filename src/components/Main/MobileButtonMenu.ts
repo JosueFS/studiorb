@@ -7,7 +7,7 @@ export const MobileButtonMenu = styled.article`
     display: none;
   }
 
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@ export const MobileButtonMenu = styled.article`
   .menu-btn__burger::before,
   .menu-btn__burger::after {
     content: '';
-    position: absolute;
+    position: fixed;
     width: 50px;
     height: 6px;
     background: ${(props) => props.theme.colors.primary};

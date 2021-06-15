@@ -9,6 +9,8 @@ export const Container = styled.section`
   align-items: center;
   gap: 32px;
 
+  background-color: ${(props) => props.theme.colors.secondary};
+
   > div {
     width: 100%;
     display: flex;
@@ -74,7 +76,8 @@ export const Techniques = styled.div`
     span {
       width: 100%;
       color: ${(props) => props.theme.colors.textPrimary};
-      font-size: clamp(1.4rem, 1.4rem + 1vw, 2.8rem);
+      font-size: clamp(1.6rem, 2.4rem + 1vw, 3.2rem);
+      font-weight: 600;
       font-family: 'Cormorant Garamond', serif;
       letter-spacing: 0.5px;
       text-align: center;
@@ -97,7 +100,7 @@ export const Techniques = styled.div`
       }
 
       span {
-        font-size: clamp(1.6rem, 1.6rem + 1vw, 3.2rem);
+        font-size: clamp(1.6rem, 2.4rem + 1vw, 2.8rem);
       }
     }
   }

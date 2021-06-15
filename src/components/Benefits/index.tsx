@@ -5,6 +5,9 @@ const Benefits = () => {
   return (
     <Container>
       <BenefitsCard />
+      <BenefitsCard />
+      <BenefitsCard />
+      <BenefitsCard />
     </Container>
   );
 };

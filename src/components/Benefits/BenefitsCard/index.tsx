@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  height: 300px;
-  width: 260px;
-  box-shadow: 8px 8px 16px rgba(50, 50, 50, 0.1);
+  width: 18vw;
+  height: 26vw;
+  box-shadow: 8px 8px 32px rgba(50, 50, 50, 0.1);
 
   display: flex;
   flex-direction: column;
@@ -15,7 +15,14 @@ const Container = styled.div`
   img {
     width: 35%;
     border-radius: 50%;
-    box-shadow: 4px 4px 8px rgba(50, 50, 50, 0.1);
+    box-shadow: 8px 8px 8px rgba(50, 50, 50, 0.1);
+  }
+
+  @media handheld and (max-width: 767px),
+    screen and (max-device-width: 767px),
+    screen and (max-width: 767px) {
+    height: 300px;
+    width: 260px;
   }
 `;
 

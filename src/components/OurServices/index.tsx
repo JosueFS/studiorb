@@ -16,7 +16,6 @@ const Services = () => {
               distinctio unde!
             </p>
           </TextContainer>
-          <Button customStyle="secondary" text="Agendar Horário" />
         </div>
 
         <Techniques>
@@ -40,6 +39,8 @@ const Services = () => {
             <span>Serviço #04</span>
           </div>
         </Techniques>
+
+        <Button customStyle="secondary" text="Agendar Horário" />
       </Container>
     </>
   );
